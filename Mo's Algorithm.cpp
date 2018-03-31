@@ -1,4 +1,5 @@
 /*
+        Mo's Algorithm
         Problem: Codeforces 82D
 */
 #include <bits/stdc++.h>
