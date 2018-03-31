@@ -1,3 +1,6 @@
+/*
+        Topic: Segment Tree
+*/
 const int Max = 1e5 + 10;
 
 struct SegmentTree{
