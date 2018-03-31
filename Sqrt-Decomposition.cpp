@@ -1,4 +1,5 @@
 /*
+        Topic: Sqrt Decomposition
         Problem: LOJ - 1112
 */
 #include <bits/stdc++.h>
