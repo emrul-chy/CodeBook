@@ -1,6 +1,6 @@
 /*
         Topic: Mo's Algorithm
-        Problem: Codeforces 82D
+        Problem: Codeforces 86D
 */
 #include <bits/stdc++.h>
 using namespace std;
