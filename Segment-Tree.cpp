@@ -7,7 +7,7 @@ const int Max = 1e5 + 10;
 int ar[Max];
 int seg[Max * 4];
 
-void calc(int node, int left, int right) {
+void build(int node, int left, int right) {
         if(left == right) {
                 seg[node] = ar[left];
                 return;
@@ -15,8 +15,8 @@ void calc(int node, int left, int right) {
         int mid = (left + right) >> 1;
         int lf = node * 2;
         int rt = node * 2 + 1;
-        calc(lf, left, mid);
-        calc(rt, mid + 1, right);
+        build(lf, left, mid);
+        build(rt, mid + 1, right);
         seg[node] = seg[lf] + seg[rt];
 }
 
