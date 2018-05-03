@@ -5,6 +5,7 @@
 
 vector <int> tree[4 * Max];
 int ar[Max];
+int inp[Max];
 
 void build( int node, int l, int r ) {
 	if( l == r ) {
@@ -12,11 +13,11 @@ void build( int node, int l, int r ) {
 		return;
 	}
 	int mid = (l + r) >> 1;
-	int left = node * 2;
-	int right = node * 2 + 1;
-	build( left, l, mid );
-	build( right, mid + 1, r);
-	merge( tree[left].begin(), tree[left].end(), tree[right].begin(), tree[right].end(), back_inserter( tree[node] ) );
+	int lf = node * 2;
+	int rt = node * 2 + 1;
+	build( lf, l, mid );
+	build( rt, mid + 1, r);
+	merge( tree[lf].begin(), tree[lf].end(), tree[rt].begin(), tree[rt].end(), back_inserter( tree[node] ) );
 }
 
 int query( int node, int l, int r, int L, int R, int val ) {
@@ -27,9 +28,9 @@ int query( int node, int l, int r, int L, int R, int val ) {
 		return lower_bound( tree[node].begin(), tree[node].end(), val ) - tree[node].begin();
 	}
 	int mid = (l + r) >> 1;
-	int left = node * 2;
-	int right = node * 2 + 1;
-	int u = query( left, l, mid, L, R, val );
-	int v = query( right, mid+1, r, L, R, val );
+	int lf = node * 2;
+	int rt = node * 2 + 1;
+	int u = query( lf, l, mid, L, R, val );
+	int v = query( rt, mid+1, r, L, R, val );
 	return u + v;
 }
