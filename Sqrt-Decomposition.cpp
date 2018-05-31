@@ -44,7 +44,7 @@ ll query( int l, int r ) {
 	ll ret = 0;
 
 	if( lf == rt ) {
-		for ( int i = l; i <= r; i++ ) {
+		for( int i = l; i <= r; i++ ) {
 			ret += ar[i];
 		}
 		return ret;
