@@ -1,10 +1,10 @@
-ll ar[Max]; 
+ll ar[Max];
 struct Node {
 	ll prop, sum;
-} seg[Max * 4]; 
+} seg[Max * 4];
 
 void build(ll node, ll l, ll r) {
-	if (l == r) {
+	if(l == r) {
 		seg[node].sum = ar[l];
 		return;
 	}
@@ -18,11 +18,11 @@ void build(ll node, ll l, ll r) {
 }
 
 ll query(ll node, ll l, ll r, ll L, ll R, ll cary = 0) {
-	if (L > r || R < l) {
+	if(L > r || R < l) {
 		return 0;
 	}
 
-	if (l >= L and r <= R) {
+	if(l >= L and r <= R) {
 		return seg[node].sum + cary * (r - l + 1);
 	}
 
@@ -37,10 +37,10 @@ ll query(ll node, ll l, ll r, ll L, ll R, ll cary = 0) {
 }
 
 void update(ll node, ll l, ll r, ll L, ll R, ll val) {
-	if (L > r || R < l) {
+	if(L > r || R < l) {
 		return;
 	}
-	if (l >= L && r <= R) {
+	if(l >= L && r <= R) {
 		seg[node].sum += ((r - l + 1) * val);
 		seg[node].prop += val;
 		return;
