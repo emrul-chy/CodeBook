@@ -37,11 +37,7 @@ int Find_parent(int n) {
 void graph() {
 	for(int i = 1; ; i++) {
 		cin >> g[i].u >> g[i].v >> g[i].w;
-
-		if(g[i].u == 0 && g[i].v == 0 && g[i].w == 0) {
-			break;
-		}
-
+		
 		edge++;
 	}
 }
