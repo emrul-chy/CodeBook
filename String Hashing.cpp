@@ -20,13 +20,12 @@ void pre_power() {
 	}
 }
 
-ull Hashing(char str [], int len) {
+void Hashing(string str, int len) {
 	ull hash_val = 0;
 	for(int i = 0; i < len; i++) {
-		hash_val = hash_val * pw[i] + str[i];
-		Hash[i] = hash_val;
+		hash_val = hash_val * base + str[i];
+		Hash[i + 1] = hash_val;
 	}
-	return hash_val;
 }
 
 ull SubstringHash(int l, int r) {
