@@ -8,7 +8,6 @@ const int Max = 2e6 + 10;
 const int Mod = 1e9 + 7;
 const ll Inf = 1LL << 62;
 
-
 #define MX 15000
 
 struct Node {
@@ -23,8 +22,8 @@ bool more(Node a, Node b) {
 	return a.w > b.w;
 }
 
-
 int node, edge, parent[MX];
+
 int Find_parent(int n) {
 	//cout << ": " << n << " " << parent[n] << endl;
 	if(parent[n] == n) {
@@ -37,7 +36,7 @@ int Find_parent(int n) {
 void graph() {
 	for(int i = 1; ; i++) {
 		cin >> g[i].u >> g[i].v >> g[i].w;
-		
+
 		edge++;
 	}
 }
@@ -79,7 +78,7 @@ int main() {
 		graph();
 		//cout << node << " " << edge << endl;
 
-		// Minimus
+		// Minimum
 		sort(g + 1, g + edge + 1, less);
 		cout << kruskal() << endl;
 
@@ -87,6 +86,5 @@ int main() {
 		sort(g + 1, g + edge + 1, more);
 		cout << kruskal() << endl;
 	}
-
 	return 0;
 }
