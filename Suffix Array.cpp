@@ -49,4 +49,8 @@ void buildLCP() {
 			}
 		}
 	}
+	for(int i = n - 1; i > 0; i--) {
+		lcp[i] = lcp[i - 1];
+	}
+	lcp[0] = 0;
 }
