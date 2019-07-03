@@ -1,4 +1,4 @@
-const int Max = 1e4 + 10;
+const int Max = 1e5 + 10;
 
 char str[Max];
 
