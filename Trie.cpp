@@ -49,3 +49,12 @@ int query(char *str, int len) {
 	}
 	return ans;
 }
+
+void del(Node *cur) {
+    for(int i = 0; i < 2; i++) {
+        if(cur->nxt[i]) {
+            del(cur->nxt[i]);
+        }
+    }
+    delete(cur);
+}
