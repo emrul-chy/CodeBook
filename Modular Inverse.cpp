@@ -8,5 +8,5 @@ pll extendedEuclid(ll a, ll b) { // returns x, y | ax + by = gcd(a,b)
 
 ll modularInverse(ll a, ll n) {
 	pair<ll, ll> ret = extendedEuclid(a, n);
-	return ((ret.xx % n) + n) % n;
+	return ((ret.first % n) + n) % n;
 }
