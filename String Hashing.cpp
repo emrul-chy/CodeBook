@@ -13,7 +13,7 @@ ll pw[Max];
 ll Hash[Max];
 
 void pre_power() {
-	pw[0] = 1 ;
+	pw[0] = 1;
 	for(int i = 1; i < Max; i++) {
 		pw[i] = (pw[i - 1] * base) % Mod;
 	}
